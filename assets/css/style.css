@@ -6,6 +6,7 @@ body {
     background-color: rgba(250, 235, 215, 0.37);
 }
 
+
 header > nav{
     background-color: blanchedalmond;
     
@@ -16,11 +17,26 @@ ul >li > a{
     margin: 10px;
 
 }
-ul{
+nav > ul{
     list-style-type: none;
     display: flex;
     margin: 0;
     padding: 10px;
+}
+ul li {
+    position: relative;
+}
+ul p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+ul > li:hover p{
+    display:block;
+    position: absolute;
+    background-color: greenyellow;
+    z-index: 1;
 }
 table{
     text-align: left;

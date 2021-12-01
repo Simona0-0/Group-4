@@ -18,8 +18,8 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
-    max-width: 1400px;
-    background-color: var(--darkred);
+    max-width: 1500px;
+    background-color: var(--white);
 }
 
 p {
@@ -43,10 +43,9 @@ p {
 .index-container header {
     grid-area: header;
     display: grid;
-    background-color: black;
+    background-color: var(--darkred);
     grid-template-areas: 
-    'logo nav'
-    ;
+    'logo nav';
     position: sticky;
     top: 0;
     
@@ -101,7 +100,7 @@ p {
 .index-container .hero {
     grid-area: hero;
     background-image: url("../images/hero.jpg");
-    border-bottom: .5rem solid var(--lightred);
+    /* border-bottom: .5rem solid var(--lightred); */
 }
 
 
@@ -119,10 +118,10 @@ p {
 /* Index, main market */
 .index-container .market {
     grid-area: market;
-    background-color: var(--darkred);
+    background-color: var(--white);
     display: grid;
     grid-template-columns: 1fr .4fr 1fr;
-    border-bottom: .5rem solid var(--lightred);
+    border-bottom: .5rem solid black;
 }
 
 .index-container .market > article {
@@ -138,15 +137,15 @@ p {
 .index-container .market h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
-    text-shadow: 2px 2px 1px black;
+    /* text-shadow: 2px 2px 1px black; */
 }
 
 .index-container .market h2,p {
-    color: white;
+    color:black;
 }
 
 .index-container .market table {
-    color: white;
+    color:black;
     line-height: 1.5;
 }
 
@@ -155,10 +154,11 @@ p {
      margin-top: 2rem;
      margin-right: 2rem;
      padding: 1rem 2rem;
-     border-radius: 10%;
+     border-radius: 10px;
      background-color: var(--darkred);
      box-shadow: 4px 5px 3px black;
  }
+
 
  .index-container .market .button a {
      text-decoration: none;
@@ -177,21 +177,21 @@ p {
 /* Index, main events */
 
 .index-container .event {
+    dis
+    /* max-width: 1500px; 
     grid-area: event;
     display: grid;
     grid-template-areas: 
-    'santa tree black'
-    ;
-    margin: 0 5rem;
-    
+    '. santa . tree . friday .';
+    align-items: stretch;*/
 }
 
 .index-container .event article {
     background-color: var(--darkred);
-    box-shadow: 6px 6px 2px black;
+    /* box-shadow: 6px 6px 2px black; */
     border-radius: 5%;
     margin: 3rem 0;
-    border: 3px solid var(--lightred);
+    /* border: 3px solid var(--lightred); */
     transition: all .5s ease-in-out;
 }
 
@@ -203,9 +203,7 @@ p {
 
 .index-container .event article img {
     height: 70%;
-    width: 95%;
-    border-top-left-radius: 5%;
-    border-top-right-radius: 3%;
+    width: 100%;
 }
 
 .index-container .event article h3,p {
@@ -218,19 +216,21 @@ p {
 
 .index-container .event .santa {
     grid-area: santa;
-}
-
-.index-container .event .tree {
-    width: 80%;
-    justify-self: center;
+    margin-right: 5rem;
 }
 
 .index-container .event .tree {
     grid-area: tree;
+    justify-self: center;
+    margin-right: 5rem;
 }
 
+/* .index-container .event .tree {
+    grid-area:black;
+} */
+
 .index-container .event .black {
-    grid-area: black;
+    grid-area: friday;
 }
 
 /* Grid for index footer */

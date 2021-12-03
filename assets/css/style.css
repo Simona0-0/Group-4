@@ -121,7 +121,7 @@ p {
     background-color: var(--white);
     display: grid;
     grid-template-columns: 1fr .4fr 1fr;
-    border-bottom: .5rem solid black;
+    /* border-bottom: .5rem solid black; */
 }
 
 .index-container .market > article {
@@ -175,24 +175,32 @@ p {
  }
 
 /* Index, main events */
-
 .index-container .event {
-    dis
-    /* max-width: 1500px; 
+    
+    /* max-width: 1200px; 
     grid-area: event;
     display: grid;
     grid-template-areas: 
     '. santa . tree . friday .';
-    align-items: stretch;*/
+    align-items: stretch; */
+
+    display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem 1rem;
+
 }
 
 .index-container .event article {
     background-color: var(--darkred);
     /* box-shadow: 6px 6px 2px black; */
-    border-radius: 5%;
-    margin: 3rem 0;
+    /* border-radius: 5%;
+    margin: 3rem 0; */
     /* border: 3px solid var(--lightred); */
-    transition: all .5s ease-in-out;
+    /* transition: all .5s ease-in-out; */
+    display: flex;
+  flex-direction: column;
+  gap: 0.5rem; 
 }
 
 .index-container .event article:hover {

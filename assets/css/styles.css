@@ -172,22 +172,22 @@ p {
 }
 
 /* ? Nav elements for Shops? */
-nav > ul{
+header > nav > ul{
     list-style-type: none;
     display: flex;
     margin: 0;
     padding: 10px;
 }
-ul li {
+section > article > ul li {
     position: relative;
 }
-ul p{
+ul.shop p{
     position: absolute;
     top: 0;
     left: 0;
     display: none;
 }
-ul > li:hover p{
+ul.shop > li:hover p{
     display:block;
     position: absolute;
     background-color: greenyellow;

@@ -87,7 +87,7 @@ p {
 .index-container main {
     grid-area: main;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr .8fr 1fr;
     grid-template-areas: 
     'hero'
     'market'
@@ -105,7 +105,7 @@ p {
 
 
 .index-container .hero h1 {
-    font-size: 5rem;
+    font-size: 6vw;
     color: white;
     margin: 5rem;
     font-weight: 200;
@@ -121,7 +121,6 @@ p {
     background-color: var(--white);
     display: grid;
     grid-template-columns: 1fr .4fr 1fr;
-    /* border-bottom: .5rem solid black; */
 }
 
 .index-container .market > article {
@@ -140,7 +139,7 @@ p {
     /* text-shadow: 2px 2px 1px black; */
 }
 
-.index-container .market h2,p {
+.market h2,p {
     color:black;
 }
 
@@ -176,36 +175,19 @@ p {
 
 /* Index, main events */
 .index-container .event {
-    
-    /* max-width: 1200px; 
-    grid-area: event;
-    display: grid;
-    grid-template-areas: 
-    '. santa . tree . friday .';
-    align-items: stretch; */
-
-    display: grid;
+  display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem 1rem;
-
 }
 
 .index-container .event article {
     background-color: var(--darkred);
-    /* box-shadow: 6px 6px 2px black; */
-    /* border-radius: 5%;
-    margin: 3rem 0; */
-    /* border: 3px solid var(--lightred); */
-    /* transition: all .5s ease-in-out; */
-    display: flex;
-  flex-direction: column;
-  gap: 0.5rem; 
-  margin: 3rem;
+    margin: 3rem;
+    transition: all .2s ease-in-out;
 }
 
 .index-container .event article:hover {
-    box-shadow: none;
+    margin: 2rem;
     cursor: pointer;
     
 }
@@ -215,34 +197,19 @@ p {
     width: 100%;
 }
 
-.index-container .event > article h3,p {
-    line-height: 1.3;
-    padding-left: 1rem;
+.index-container .event article p {
+    line-height: 1.2;
+    color: white;
+    margin: .5rem;
+    padding-left: .5rem;
 }
 
 .index-container .event article h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: white;
+    padding-left: 1rem;
 }
 
-.index-container .event .santa {
-    grid-area: santa;
-    margin-right: 5rem;
-}
-
-.index-container .event .tree {
-    grid-area: tree;
-    justify-self: center;
-    margin-right: 5rem;
-}
-
-/* .index-container .event .tree {
-    grid-area:black;
-} */
-
-.index-container .event .black {
-    grid-area: friday;
-}
 
 /* Grid for index footer */
 
@@ -268,4 +235,80 @@ footer section a {
 footer section a:hover {
     cursor: pointer;
     color: var(--darkorange);
+}
+
+/* Media queries */
+
+/* Media queries for mobile */
+
+@media screen and (max-width: 450px) {
+
+    .index-container header nav {
+        justify-self: start;
+    }
+    .index-container main {
+        grid-area: main;
+        display: grid;
+        grid-template-rows: .3fr .5fr 1fr;
+        grid-template-areas: 
+        'hero'
+        'market'
+        'event'
+        ;
+    }
+
+    .index-container .market {
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .index-container .market  article {
+        grid-row: span 1;
+    }
+    
+    .index-container .market  aside {
+        grid-row: 2;
+        grid-column: span 1;
+        font-size: 1.2rem;
+    }
+    
+    .index-container .market h2 {
+        font-size: 4rem;
+    }
+
+    .index-container .market p {
+        font-size: 1.4rem;
+    }
+
+    .index-container .hero h1 {
+        font-size: 8vw;
+    }
+
+    .index-container .market {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .index-container .event {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
+      }
+
+    .index-container .event article {
+        margin: 3rem;
+    }
+    
+    .index-container .event article img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .index-container .event article h3 {
+        font-size:  2rem;
+    }
+
+    .index-container .event article p {
+        font-size:  1.5rem;
+        line-height: 1.5;
+    }
+
 }

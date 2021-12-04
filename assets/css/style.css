@@ -296,11 +296,6 @@ footer section a:hover {
     .index-container .event article {
         margin: 3rem;
     }
-    
-    .index-container .event article img {
-        width: 100%;
-        height: 50%;
-    }
 
     .index-container .event article h3 {
         font-size:  2rem;

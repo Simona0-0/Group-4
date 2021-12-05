@@ -27,9 +27,12 @@ p {
 }
 
 /* Grid for the index page */
-.index-container {
+.shops-container {
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
 }
 
 /* Header section */
@@ -45,7 +48,7 @@ header {
 header > nav {
     grid-area: nav;
     justify-self: end;
-    color: var(--lightorange);
+    margin: 1rem 0;
 }
 header > nav li a{
     text-decoration: none;
@@ -57,9 +60,12 @@ header > nav li a{
 
 header nav li {
     padding-right: 4rem;
+    list-style: none;
 
 }
-
+header nav ul {
+    display: flex;
+}
 header nav li:hover a {
     color: var(--lightorange);
     cursor: pointer;
@@ -75,6 +81,16 @@ header nav li:hover a {
     'event'
     ;
     grid-template-rows: 20% 40% 40%;
+}
+header {
+    grid-area: header;
+    display: grid;
+    background-color: var(--darkred);
+    grid-template-areas: 
+    'logo nav';
+    position: sticky;
+    top: 0;
+    
 }
 /* Hero section for the index page */
 .index-main .hero {

@@ -278,7 +278,7 @@ footer section a:hover {
         justify-self: start;
     }
     .index-container main {
-  
+        grid-template-columns: 1fr;
         grid-template-rows: .3fr .5fr 1fr;
     }
 

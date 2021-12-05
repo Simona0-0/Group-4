@@ -209,7 +209,7 @@ ul.shop p{
 ul.shop > li:hover p{
     display:block;
     position: absolute;
-    background-color: greenyellow;
+    background-color: whitesmoke;
     z-index: 1;
 }
 .imagemarket img {
@@ -220,6 +220,64 @@ ul.shop > li:hover p{
     size: 2em;
     text-align: center;
 }
-footer{
-    background-color: blanchedalmond;
+/* Grid for footer */
+
+footer {
+    grid-area: footer;
+    border-top: .5rem solid var(--lightred);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: black;
 }
+
+footer section {
+    margin: 1rem 0;
+    padding: 0 5rem;
+}
+
+footer section a {
+    text-decoration: none;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+footer section a:hover {
+    cursor: pointer;
+    color: var(--darkorange);
+}
+/* Media queries */
+
+/* Media queries for mobile */
+
+@media screen and (max-width: 450px) {
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: .3fr 2fr;
+    }
+
+   .hero h1 {
+        font-size: 6rem;
+    }
+
+    .shops {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
+      }
+
+    .shops article {
+        margin: 3rem;
+    }
+
+     .shops article h3 {
+        font-size:  2rem;
+    }
+
+    .event article p {
+        font-size:  1.5rem;
+        line-height: 1.5;
+    }
+
+}
+  

@@ -137,6 +137,30 @@ header {
     color: var(--white);
     text-shadow: 2px 2px 1px var(--black);
 }
+/* Grid for the whole main part of the funfair page */
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 0.5fr auto;
+    grid-template-areas: 
+    'hero'
+    'event';
+}
+/* Funfair hero image */
+
+.hero {
+    grid-area: hero;
+    background-image: url("../images/hero.jpg");
+}
+
+.hero h1 {
+    font-size: 6vw;
+    color: white;
+    margin: 5rem;
+    font-weight: 200;
+    text-shadow: 1px 2px 2px rgb(0, 0, 0);
+}
 
 /* Market section for the index page */
 

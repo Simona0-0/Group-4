@@ -124,6 +124,11 @@ header {
     
 }
 /* Hero section for the index page */
+.logo {
+    max-width: 250px;
+    padding-left: 2.5rem;
+}
+
 .index-main .hero {
     grid-area: hero;
     background-image: url("../images/hero.jpg");

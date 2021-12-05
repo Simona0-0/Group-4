@@ -121,6 +121,9 @@ main {
 }
 
 /* Funfair hero image */
+.logo {
+    max-width: 200px;
+}
 
 .hero {
     grid-area: hero;

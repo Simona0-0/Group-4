@@ -122,6 +122,10 @@ header nav > ul > li:hover > .market-menu {
 
 /* Index, main hero */
 
+.index-container .logo {
+    max-width: 200px;
+}
+
 .index-container .hero {
     grid-area: hero;
     background-image: url("../images/hero.jpg");

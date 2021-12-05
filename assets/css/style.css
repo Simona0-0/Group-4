@@ -59,16 +59,16 @@ p {
 }
 
 
-.index-container header nav ul {
+.index-container header > nav > ul {
     display: flex;
 
 }
 
-.index-container header nav li {
+.index-container header > nav li {
     list-style: none;
 }
 
-.index-container header li a {
+.index-container header > nav li > a {
     text-decoration: none;
     color: var(--white);
     padding-right: 3rem;
@@ -76,17 +76,43 @@ p {
     transition: all .2s ease-in-out;
 }
 
-.index-container header li:hover a {
+.index-container header > nav li:hover > a {
     color: var(--lightorange);
     cursor: pointer;
 }
+
+/* Dropdown menu */
+
+.index-container header nav > ul > li {
+	position: relative;
+    display: block;
+}
+
+header nav > ul > li:hover > .market-menu { 
+    display: block;
+}
+
+ header .market-menu {
+     display: none;
+     min-width: 10rem;
+     width: max-content;
+     background-color: var(--lightred);
+     color: white;
+     text-decoration: none;
+     position: absolute;
+     left: 0;
+     padding: 5px;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     z-index: 1;
+ }
+
 
 /* Grid for the whole main part of the index page */
 
 .index-container main {
     grid-area: main;
     display: grid;
-    grid-template-rows: 1fr .8fr 1fr;
+    grid-template-rows: 1fr .5fr 1fr;
     grid-template-areas: 
     'hero'
     'market'
@@ -112,8 +138,6 @@ p {
 }
 
 
-
-
 /* Index, main market */
 .index-container .market {
     grid-area: market;
@@ -132,15 +156,18 @@ p {
     margin: 5rem;
 }
 
+.market h2,p {
+    color:black;
+    font-size: 1.3rem;
+}
+
 .index-container .market h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
     /* text-shadow: 2px 2px 1px black; */
 }
 
-.market h2,p {
-    color:black;
-}
+
 
 .index-container .market table {
     color:black;
@@ -198,7 +225,7 @@ p {
 
 .index-container .event article p {
     line-height: 1.2;
-    color: white;
+    color: var(--darkorange);
     margin: .5rem;
     padding-left: .5rem;
 }

@@ -77,13 +77,44 @@ header li:hover a {
     color: var(--lightorange);
     cursor: pointer;
 }
+/*Dropdown menu  */
+.funfair-container header nav > ul > li {
+	position: relative;
+    display: block;
+}
+
+header nav > ul > li:hover > .market-menu { 
+    display: block;
+}
+
+ header .market-menu {
+     display: none;
+     min-width: 10rem;
+     width: max-content;
+     background-color: var(--lightred);
+     color: white;
+     text-decoration: none;
+     position: absolute;
+     left: 0;
+     padding: 5px;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     z-index: 1;
+ }
+
+ header nav > ul > li:hover a{
+     color: white;
+ } 
+
+ header nav > ul > li:hover a:hover {
+     color: var(--darkorange);
+ }
 
 /* Grid for the whole main part of the funfair page */
 
 main {
     grid-area: main;
     display: grid;
-    grid-template-rows: 0.5fr 1fr;
+    grid-template-rows: 0.5fr auto;
     grid-template-areas: 
     'hero'
     'event';
@@ -108,7 +139,7 @@ main {
 .event {
     grid-area: event;
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows:  auto;
     grid-template-columns: 1fr 1fr;
     margin: 0 5rem; 
   }
@@ -116,31 +147,27 @@ main {
  .event article {
       background-color: var(--darkred);
       margin: 3rem;
-      transition: all .2s ease-in-out;
   }
   
- .event article:hover {
-      margin: 2rem;
-      cursor: pointer;
-      
-  }
   
  .event article img {
-      height: 70%;
       width: 100%;
+      height: 65%;;
   }
   
  .event article p,time {
-      line-height: 1.2;
-      color: white;
+      line-height: 1.5;
+      color: var(--darkorange);
       margin: .5rem;
       padding-left: .5rem;
+      font-size: 1.5rem;
   }
 
 .event article h3 {
-      font-size: 1.1rem;
+      font-size: 2rem;
       color: white;
       padding-left: 1rem;
+      margin-bottom: 1rem;
   }
   
   

@@ -246,14 +246,8 @@ footer section a:hover {
         justify-self: start;
     }
     .index-container main {
-        grid-area: main;
-        display: grid;
+  
         grid-template-rows: .3fr .5fr 1fr;
-        grid-template-areas: 
-        'hero'
-        'market'
-        'event'
-        ;
     }
 
     .index-container .market {
